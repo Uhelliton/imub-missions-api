@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMemberAndressTable extends Migration
+class CreateFormSubscriptionAndressTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,20 +13,22 @@ class CreateMemberAndressTable extends Migration
      */
     public function up()
     {
-        Schema::create('membro_endereco', function (Blueprint $table) {
+        Schema::create('ficha_inscricao_endereco', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('cep', 9)->nullable();
-            $table->char('estado', 2);
-            $table->string('cidade', 60);
-            $table->string('bairro', 50)->nullable();
             $table->string('endereco')->nullable();
             $table->string('numero', 10)->nullable();
             $table->string('referencia')->nullable();
 
-            $table->integer('membro_id', false)->unsigned();
-            $table->foreign('membro_id')
+            $table->integer('bairro_id', false)->unsigned();
+            $table->foreign('bairro_id')
                   ->references('id')
-                  ->on('membro');
+                  ->on('bairro');
+
+            $table->integer('cidade_id', false)->unsigned();
+            $table->foreign('cidade_id')
+                  ->references('id')
+                  ->on('cidade');
+
         });
     }
 
@@ -37,6 +39,6 @@ class CreateMemberAndressTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('member_andress');
+        Schema::dropIfExists('ficha_inscricao_endereco');
     }
 }

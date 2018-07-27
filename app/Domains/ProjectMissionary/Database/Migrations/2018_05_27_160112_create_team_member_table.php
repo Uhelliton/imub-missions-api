@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePjmTeamMemberTable extends Migration
+class CreateTeamMemberTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,18 +13,18 @@ class CreatePjmTeamMemberTable extends Migration
      */
     public function up()
     {
-        Schema::create('pjm_equipe_membro', function (Blueprint $table) {
+        Schema::create('equipe_membro', function (Blueprint $table) {
             $table->increments('id');
 
-            $table->integer('membro_id', false);
+            $table->integer('membro_id', false)->unsigned();
             $table->foreign('membro_id')
                   ->references('id')
-                  ->on('pjm_membro');
+                  ->on('membro');
 
-            $table->integer('equipe_id', false);
+            $table->integer('equipe_id', false)->unsigned();
             $table->foreign('equipe_id')
                   ->references('id')
-                  ->on('pjm_equipe');
+                  ->on('equipe');
         });
     }
 
@@ -35,6 +35,6 @@ class CreatePjmTeamMemberTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pjm_equipe_membro');
+        Schema::dropIfExists('equipe_membro');
     }
 }
