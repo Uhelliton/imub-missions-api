@@ -1,0 +1,797 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="54c14504-6b2a-4eb8-9283-7ef46ce26b9f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Domains/Mission/Course/Providers/DomainServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Domains/Mission/Locale/Database/Migrations/2018_04_17_231434_create_city_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Domains/Mission/Locale/Database/Migrations/2018_04_17_231438_create_city_district_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Application/Authentication/Http/Controllers/Auth/LoginController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Application/Authentication/Http/Controllers/Auth/ResetPasswordController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Application/Authentication/Http/Notifications/ClientResetPassword.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Application/Authentication/Http/Routes/Console.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Application/Authentication/Http/Routes/Web.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Application/Authentication/Providers/AppServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Application/Authentication/Providers/AuthServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Application/Authentication/Providers/RouteServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Application/Authentication/Traits/Authenticable.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Application/ConsoleKernel.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Application/Core/Http/Controllers/ClientController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Application/Core/Http/Middleware/Cors.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Application/Core/Http/Middleware/EncryptCookies.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Application/Core/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Application/Core/Http/Middleware/TrimStrings.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Application/Core/Http/Middleware/TrustProxies.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Application/Core/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Application/Core/Http/Routes/Api.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Application/Core/Http/Routes/Console.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Application/Core/Http/Routes/Web.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Application/Core/Jobs/SendMailCustumerRegistration.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Application/Core/Providers/AppServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Application/Core/Providers/BroadcastServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Application/Core/Providers/EventServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Application/Core/Providers/RouteServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Application/ExceptionHandler.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Application/HttpKernel.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domains/Membership/Database/Migrations/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domains/Membership/Database/Migrations/2018_05_27_161344_create_member_status_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Domains/Membership/Database/Migrations/reverter/2018_05_27_161344_create_member_status_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domains/ProjectMissionary/Database/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domains/ProjectMissionary/Database/Factories/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domains/ProjectMissionary/Database/Migrations/2017_12_09_162708_create_sex_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Domains/Shared/Database/Migrations/2017_12_09_162708_create_sex_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domains/ProjectMissionary/Database/Migrations/2017_12_09_195154_create_civil_status_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Domains/Shared/Database/Migrations/2017_12_09_195154_create_civil_status_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domains/ProjectMissionary/Database/Migrations/2018_05_25_000031_create_project_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Domains/Mission/Project/Database/Migrations/2018_05_25_000031_create_project_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domains/ProjectMissionary/Database/Migrations/2018_05_25_144235_create_range_age_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Domains/Shared/Database/Migrations/2018_12_12_235001_create_state_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domains/ProjectMissionary/Database/Migrations/2018_05_27_150044_create_member_status_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domains/ProjectMissionary/Database/Migrations/2018_05_27_150408_create_member_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Domains/Mission/Team/Database/Migrations/2018_05_27_150408_create_member_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domains/ProjectMissionary/Database/Migrations/2018_05_27_155610_create_team_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Domains/Mission/Team/Database/Migrations/2018_05_27_155610_create_team_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domains/ProjectMissionary/Database/Migrations/2018_05_27_160112_create_team_member_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Domains/Mission/Team/Database/Migrations/2018_05_27_160112_create_team_member_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domains/ProjectMissionary/Database/Migrations/2018_05_27_232604_create_form_subscription_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Domains/Mission/Evangelism/Database/Migrations/2018_05_27_232604_create_form_subscription_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domains/ProjectMissionary/Database/Migrations/2018_05_27_232707_create_form_subscription_andress_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Domains/Mission/Evangelism/Database/Migrations/2018_05_27_232707_create_form_subscription_andress_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domains/ProjectMissionary/Database/Migrations/2018_07_25_131219_create_course_status_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Domains/Shared/Database/Migrations/2018_07_25_131219_create_course_status_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domains/ProjectMissionary/Database/Migrations/2018_07_25_131220_create_course_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Domains/Mission/Course/Database/Migrations/2018_07_25_131220_create_course_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domains/ProjectMissionary/Database/Migrations/2018_07_25_131637_create_course_lesson_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Domains/Mission/Course/Database/Migrations/2018_07_25_131637_create_course_lesson_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domains/ProjectMissionary/Database/Migrations/2018_07_25_132407_create_conversion_local_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Domains/Mission/Evangelism/Database/Migrations/2018_07_25_132407_create_conversion_local_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domains/ProjectMissionary/Database/Migrations/2018_07_25_132520_create_conversion_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Domains/Mission/Evangelism/Database/Migrations/2018_07_25_132520_create_conversion_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domains/ProjectMissionary/Database/Seeds/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domains/ProjectMissionary/Http/Controllers/DashboardController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domains/ProjectMissionary/Http/Middleware/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domains/ProjectMissionary/Http/Routes/Api.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domains/ProjectMissionary/Providers/DomainServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domains/ProjectMissionary/Providers/RouteServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domains/User/2014_07_02_230147_migration_cartalyst_sentinel.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domains/User/Http/Controllers/PermissionGroupController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domains/User/Http/Controllers/UserController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domains/User/Http/Middleware/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domains/User/Http/Requests/UserValidator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domains/User/Http/Routes/Web.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domains/User/Models/Permission.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domains/User/Models/Role.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domains/User/Models/User.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domains/User/Providers/ModuleServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domains/User/Providers/RouteServiceProvider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domains/User/Resources/Views/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domains/User/Resources/Views/edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domains/User/Resources/Views/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domains/User/Resources/Views/login.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domains/User/Resources/Views/partials/form/body-create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domains/User/Resources/Views/partials/form/body-edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domains/User/Resources/Views/partials/form/body-password.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domains/User/Resources/Views/password.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domains/User/Resources/Views/permission/create.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domains/User/Resources/Views/permission/edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domains/User/Resources/Views/permission/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domains/User/Resources/Views/permission/partials/form-body.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domains/User/Resources/Views/profile.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domains/User/RolesUsersTableSeeder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domains/User/Services/AuthServices.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domains/User/Services/UserService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domains/User/UsersTableSeeder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Support/Contracts/Repositories/RepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Support/Contracts/Repositories/RepositoryInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Support/Helpers/SafeInjectionHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Support/Helpers/SafeInjectionHelper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Support/Helpers/StringHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Support/Helpers/StringHelper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Support/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Support/Http/Controllers/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Support/Http/Routing/RoutesFile.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Support/Http/Routing/RoutesFile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Support/Providers/HelperServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Support/Providers/HelperServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/broadcasting.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/broadcasting.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/cache.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/cache.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/logging.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/logging.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/mail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/queue.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/queue.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/session.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/session.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/trustedproxy.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/database/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2018_07_26_231615_create_city_state_country_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/public/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/web.config" beforeDir="false" afterPath="$PROJECT_DIR$/public/web.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/theme/components/portlet-header.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/theme/footer.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/theme/header.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/theme/main.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/theme/navigation.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/theme/partials/quick-actions.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/theme/partials/quick-sidebar-right.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/cache/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+  </component>
+  <component name="FileEditorManager">
+    <leaf />
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>GinoLab</find>
+      <find>GinoLab\</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>Igestao</replace>
+      <replace>App\</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>C:\Webserver\www\projects\igestao\ig-api\app</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/app/Domains/user/Role.php" />
+        <option value="$PROJECT_DIR$/app_/User.php" />
+        <option value="$PROJECT_DIR$/bootstrap/app.php" />
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/app/Units/Core/Http/Routes/Api.php" />
+        <option value="$PROJECT_DIR$/config/app.php" />
+        <option value="$PROJECT_DIR$/app/Units/ExceptionHandler.php" />
+        <option value="$PROJECT_DIR$/app/Units/HttpKernel.php" />
+        <option value="$PROJECT_DIR$/app/Units/ConsoleKernel.php" />
+        <option value="$PROJECT_DIR$/app/Units/Core/Http/Routes/Web.php" />
+        <option value="$PROJECT_DIR$/app/Domains/ProjectMissionary/Database/Migrations/2018_07_25_131219_create_course_status_table.php" />
+        <option value="$PROJECT_DIR$/app/Domains/ProjectMissionary/Database/Migrations/2018_07_25_131220_create_course_table.php" />
+        <option value="$PROJECT_DIR$/app/Domains/ProjectMissionary/Database/Migrations/2018_07_25_131637_create_course_lesson_table.php" />
+        <option value="$PROJECT_DIR$/app/Domains/ProjectMissionary/Database/Migrations/2018_05_25_000031_create_project_table.php" />
+        <option value="$PROJECT_DIR$/app/Domains/ProjectMissionary/Database/Migrations/2018_05_25_144235_create_range_age_table.php" />
+        <option value="$PROJECT_DIR$/app/Domains/ProjectMissionary/Database/Migrations/2018_05_27_150044_create_member_status_table.php" />
+        <option value="$PROJECT_DIR$/app/Domains/ProjectMissionary/Database/Migrations/2018_05_27_150408_create_member_table.php" />
+        <option value="$PROJECT_DIR$/app/Domains/ProjectMissionary/Database/Migrations/2018_05_27_155610_create_team_table.php" />
+        <option value="$PROJECT_DIR$/app/Domains/ProjectMissionary/Database/Migrations/2018_05_27_160112_create_team_member_table.php" />
+        <option value="$PROJECT_DIR$/app/Domains/ProjectMissionary/Database/Migrations/2018_05_27_232604_create_form_subscription_table.php" />
+        <option value="$PROJECT_DIR$/app/Domains/ProjectMissionary/Database/Migrations/2018_05_27_232707_create_form_subscription_andress_table.php" />
+        <option value="$PROJECT_DIR$/app/Domains/ProjectMissionary/Database/Migrations/2018_07_25_132520_create_conversion_table.php" />
+        <option value="$PROJECT_DIR$/app/Domains/ProjectMissionary/Database/Migrations/2018_07_25_132407_create_conversion_local_table.php" />
+        <option value="$PROJECT_DIR$/app/Domains/Mission/Database/Migrations/2018_05_27_232604_create_form_subscription_table.php" />
+        <option value="$PROJECT_DIR$/app/Domains/Shared/Database/Migrations/2018_12_17_231434_create_city_table.php" />
+        <option value="$PROJECT_DIR$/app/Domains/Mission/Database/Migrations/2018_12_17_231434_create_city_table.php" />
+        <option value="$PROJECT_DIR$/app/Domains/Mission/Database/Migrations/2018_04_17_231434_create_city_district_table.php" />
+        <option value="$PROJECT_DIR$/app/Domains/Mission/Locale/Database/Migrations/2018_04_17_231438_create_city_district_table.php" />
+        <option value="$PROJECT_DIR$/app/Domains/Shared/Database/Migrations/2017_12_09_195154_create_civil_status_table.php" />
+        <option value="$PROJECT_DIR$/app/Domains/Membership/Database/Migrations/reverter/2018_05_27_161344_create_member_status_table.php" />
+        <option value="$PROJECT_DIR$/app/Domains/Mission/Evangelism/Database/Migrations/2018_07_25_132407_create_conversion_local_table.php" />
+        <option value="$PROJECT_DIR$/app/Domains/Mission/Membership/Database/Migrations/2018_05_25_000031_create_project_table.php" />
+        <option value="$PROJECT_DIR$/app/Domains/Shared/Database/Migrations/2017_12_09_162708_create_sex_table.php" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/vendor/fideloper/proxy" />
+      <path value="$PROJECT_DIR$/vendor/hamcrest/hamcrest-php" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-iconv" />
+      <path value="$PROJECT_DIR$/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-token-stream" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/mockery/mockery" />
+      <path value="$PROJECT_DIR$/vendor/laravel/framework" />
+      <path value="$PROJECT_DIR$/vendor/laravel/tinker" />
+      <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir" />
+      <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/vendor/league/flysystem" />
+      <path value="$PROJECT_DIR$/vendor/erusev/parsedown" />
+      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/vendor/opis/closure" />
+      <path value="$PROJECT_DIR$/vendor/filp/whoops" />
+      <path value="$PROJECT_DIR$/vendor/psy/psysh" />
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/jakub-onderka/php-console-color" />
+      <path value="$PROJECT_DIR$/vendor/jakub-onderka/php-console-highlighter" />
+      <path value="$PROJECT_DIR$/vendor/dragonmantank/cron-expression" />
+      <path value="$PROJECT_DIR$/vendor/tijsverkoyen/css-to-inline-styles" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/nunomaduro/collision" />
+      <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
+      <path value="$PROJECT_DIR$/vendor/beyondcode/laravel-dump-server" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php56" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-util" />
+      <path value="$PROJECT_DIR$/vendor/tymon/jwt-auth" />
+      <path value="$PROJECT_DIR$/vendor/namshi/jose" />
+      <path value="$PROJECT_DIR$/vendor/lcobucci/jwt" />
+      <path value="$PROJECT_DIR$/vendor/owen-it/laravel-auditing" />
+    </include_path>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/ig-api.iml" />
+        <option value="$PROJECT_DIR$/.idea/php.xml" />
+        <option value="$PROJECT_DIR$/.idea/misc.xml" />
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+        <option value="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="260" />
+    <option name="y" value="20" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="ig-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ig-api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ig-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ig-api" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ig-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ig-api" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Domains" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ig-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ig-api" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Domains" type="462c0819:PsiDirectoryNode" />
+              <item name="Mission" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ig-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ig-api" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Units" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ig-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ig-api" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Units" type="462c0819:PsiDirectoryNode" />
+              <item name="ProjectMissionary" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ig-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ig-api" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ig-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ig-api" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Domains/Mission" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Webserver\www\projects\igestao\ig-api\app\Domains\Mission\Project\Database\Migrations" />
+      <recent name="C:\Webserver\www\projects\igestao\ig-api\app\Domains\Membership\Database\Migrations\reverter" />
+      <recent name="C:\Webserver\www\projects\igestao\ig-api\app\Domains\Mission\Course" />
+      <recent name="C:\Webserver\www\projects\igestao\ig-api\app\Domains\Mission\Evangelism" />
+      <recent name="C:\Webserver\www\projects\igestao\ig-api\app\Domains\Mission\Membership\Database\Migrations" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Webserver\www\projects\igestao\ig-api\app\Domains\Mission" />
+      <recent name="C:\Webserver\www\projects\igestao\ig-api\app\Domains\Mission\Team" />
+      <recent name="C:\Webserver\www\projects\igestao\ig-api\app\Domains\Mission\Membership" />
+      <recent name="C:\Webserver\www\projects\igestao\ig-api\app\Domains\Mission\Locale" />
+      <recent name="C:\Webserver\www\projects\igestao\ig-api\app\Domains\Mission\Database\Migrations" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner scope="XML" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="54c14504-6b2a-4eb8-9283-7ef46ce26b9f" name="Default Changelist" comment="" />
+      <created>1559442173167</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1559442173167</updated>
+      <workItem from="1559442174329" duration="4196000" />
+      <workItem from="1560054824712" duration="170000" />
+      <workItem from="1562072257465" duration="18000" />
+      <workItem from="1562284602927" duration="9205000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="13589000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25799572" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32998884" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32998884" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/Application/ConsoleKernel.php" />
+    <entry file="file://$PROJECT_DIR$/app/Domains/Auditing/LogAccess.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Support/Services/S3ImageManageService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Domains/User/Role.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" selection-start-line="2" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+          <folding>
+            <element signature="e#23#63#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="698">
+          <caret line="40" column="11" selection-start-line="40" selection-start-column="11" selection-end-line="40" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env.example" />
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/jwt.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/audit.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Units/Core/Http/Traits/ResponseTrait.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1794">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Units/Core/Http/Routes/Api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Units/Core/Http/Routes/Console.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Units/Core/Providers/UnitServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Units/Core/Providers/RouteServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Units/ConsoleKernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="21" column="53" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env" />
+    <entry file="file://C:/etc/config/igestao-api/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Units/ExceptionHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="48" column="52" selection-start-line="48" selection-start-column="52" selection-end-line="48" selection-end-column="52" />
+          <folding>
+            <element signature="e#33#47#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Units/Core/Http/Routes/Web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Domains/Membership/Http/Routes/Api.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Domains/Membership/Database/Migrations/2017_12_09_162708_create_sex_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Domains/Membership/Database/Migrations/2017_12_11_232536_create_member_ministry_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Domains/Membership/Database/Migrations/2017_12_09_204055_create_member_document_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Domains/Membership/Database/Migrations/2017_12_09_202711_create_member_role_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Domains/Membership/Database/Migrations/2017_12_09_172611_create_member_type_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Domains/ProjectMissionary/Database/Migrations/2018_05_27_150044_create_member_status_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="28" column="46" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
+          <folding>
+            <element signature="e#7#45#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Domains/ProjectMissionary/Database/Migrations/2018_05_25_144235_create_range_age_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="28" column="45" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Domains/Membership/Database/Migrations/2017_12_09_201932_create_member_andress_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Domains/Mission/Evangelism/Database/Migrations/2018_05_27_232707_create_form_subscription_andress_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="173" column="63" selection-start-line="173" selection-start-column="63" selection-end-line="173" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Domains/Mission/Course/Providers/DomainServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="37" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Domains/Laboratory/Resources/Rules/ProductRules.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Units/HttpKernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="18" column="53" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Domains/Membership/Database/Migrations/reverter/2018_05_27_161344_create_member_status_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Domains/Mission/Evangelism/Database/Migrations/2018_07_25_132520_create_conversion_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="26" column="42" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Domains/Mission/Evangelism/Database/Migrations/2018_07_25_132407_create_conversion_local_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Domains/Mission/Course/Database/Migrations/2018_07_25_131220_create_course_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Domains/Mission/Course/Database/Migrations/2018_07_25_131637_create_course_lesson_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="652">
+          <caret line="33" column="33" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Domains/Mission/Team/Database/Migrations/2018_05_27_155610_create_team_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="17" column="35" lean-forward="true" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Domains/Shared/Database/Migrations/2017_12_09_162708_create_sex_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="17" column="70" selection-start-line="17" selection-start-column="70" selection-end-line="17" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Domains/Shared/Database/Migrations/2017_12_09_195154_create_civil_status_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="18" column="76" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="18" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Domains/Shared/Database/Migrations/2018_07_25_131219_create_course_status_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Domains/Shared/Database/Migrations/2018_12_12_235001_create_state_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Domains/Mission/Locale/Database/Migrations/2018_04_17_231434_create_city_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="23" lean-forward="true" selection-start-line="19" selection-start-column="11" selection-end-line="23" />
+          <folding>
+            <element signature="e#7#45#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Domains/Mission/Locale/Database/Migrations/2018_04_17_231438_create_city_district_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="736">
+          <caret line="34" column="39" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
+          <folding>
+            <element signature="e#7#45#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Domains/Mission/Project/Database/Migrations/2018_05_25_000031_create_project_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="19" column="32" lean-forward="true" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Domains/Mission/Team/Database/Migrations/2018_05_27_150408_create_member_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="28" column="43" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Domains/Mission/Team/Database/Migrations/2018_05_27_160112_create_team_member_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Domains/Mission/Evangelism/Database/Migrations/2018_05_27_232604_create_form_subscription_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="19" column="49" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

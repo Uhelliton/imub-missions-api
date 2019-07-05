@@ -21,20 +21,6 @@ interface RepositoryInterface
     public function all($collumns = array('*'), int $limit = null);
 
 
-
-    /**
-     * Método que retorna a listagem dados de uma tabela,
-     * porém usando relacionamento vinculado ao modelo
-     *
-     * @param array   $relations
-     * @exemple with(['papel, 'permissao'])
-     *
-     * @return Collection
-     */
-    public function with(array $relations);
-
-
-
     /**
      * Método que retorna uma coluna especifica da tabela da tabela
      *
@@ -67,15 +53,38 @@ interface RepositoryInterface
     public function findWhere(array $where, $collumns = array('*'), int $limit = null);
 
 
-    /**
-     * Método resposável para listar os dados da tabela, usando paginacao
-     *
-     * @param int   $limit
-     * @param array $collumns
-     * @return Collection
-     */
-    public function paginate(int $limit  = 10, $collumns = array('*'));
 
+    /**
+     * Método que retorna os elementos da tabela, usando paramentros diversos
+     *
+     * @param string $field
+     * @param array $id
+     * @param array $where
+     * @param array $collumns
+     * @param int $limit
+     * @return \Illuminate\Http\Resources\Json\ResourceCollection
+     */
+    public function findWhereIn(string $field, array $id, array $where = array(), $collumns = array('*'), int $limit = null);
+
+
+
+    /**
+     * Método que retorna a quantidade de registro de uma tablela
+     *
+     * @param array $where
+     * @return int
+     */
+    public function count(array $where);
+
+
+    /**
+     * Método que retorna a soma de registro por campo de uma tablela
+     *
+     * @param array $where
+     * @param string $field
+     * @return mixed
+     */
+    public function sum(array $where, string $field);
 
 
     /**
@@ -99,6 +108,16 @@ interface RepositoryInterface
      */
     public function update(array $attributes, int $id);
 
+
+    /**
+     * Método que atualiza ou insere um registro na tablela
+     *
+     * @param array $where
+     * @param array $attributes
+     * @exemple updateOrInsert(['email' => 'uhelliton@uol.com.br'],  ['name' => 'Uhelliton', 'city' => 'Ps'] )
+     * @return \Illuminate\Http\Resources\Json\JsonResource
+     */
+    public function updateOrCreate($where = array(), $attributes);
 
 
     /**

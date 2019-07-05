@@ -1,6 +1,6 @@
 <?php
 
-namespace IGestao\Support\Providers;
+namespace Igestao\Support\Providers;
 
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 
@@ -21,5 +21,6 @@ class HelperServiceProvider extends ServiceProvider
     {
         require __DIR__ .'/../Helpers/StringHelper.php';
         require __DIR__ .'/../Helpers/SafeInjectionHelper.php';
+        require __DIR__ .'/../Helpers/AppHelper.php';
     }
 }

@@ -25,8 +25,10 @@ abstract class RoutesFile
      */
     protected $router;
 
+
     /**
      * RouteFile constructor.
+     *
      * @param array $options
      */
     public function __construct($options = [])
