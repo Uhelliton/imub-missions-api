@@ -32,8 +32,7 @@ class UserCollectionTransformer extends ResourceCollection
                     'name'   => $object->nome,
                     'email'  => $object->email,
                     'thumb'  => $object->foto,
-                    'role'      => new RoleUserTransformer($object->roleUser),
-                    'pointSale' => PointSaleUserTransformer::collection($object->pointSaleUser)
+                    'role'      => new RoleUserTransformer($object->roleUser)
                 ];
             });
     }

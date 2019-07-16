@@ -91,25 +91,4 @@ class User extends Authenticatable implements AuditableContract, UserResolver, J
     {
         return $this->hasOne('IGestao\Domains\User\RoleUser', 'usuario_id', 'id');
     }
-
-    /**
-     * Relacionamento com a entidade {acl_funcao_usurio}
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function pointSaleUser ()
-    {
-        return $this->hasMany('IGestao\Domains\User\PointSaleUser', 'usuario_id', 'id');
-    }
-
-
-    /**
-     * Relacionamento com a entidade {acl_setor_usuario}
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function sectorUser ()
-    {
-        return $this->hasMany('IGestao\Domains\User\SectorUser', 'usuario_id', 'id');
-    }
 }

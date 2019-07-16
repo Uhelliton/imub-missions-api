@@ -19,9 +19,7 @@ class UserTransformer extends JsonResource
             'name'   => $this->nome,
             'email'  => $this->email,
             'thumb'  => $this->foto,
-            'role'      => new RoleUserTransformer($this->roleUser),
-            'pointSale' => PointSaleUserTransformer::collection($this->pointSaleUser),
-            'sectors'   => SectorUserTransformer::collection($this->sectorUser)
+            'role'      => new RoleUserTransformer($this->roleUser)
         ];
     }
 }

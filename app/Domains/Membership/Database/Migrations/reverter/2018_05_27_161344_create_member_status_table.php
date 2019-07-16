@@ -14,13 +14,13 @@ class CreateMemberStatusTable extends Migration
     public function up()
     {
         /**
-        INSERT INTO `igestao_dev`.`membro_status` (`tipo`) VALUES ('Ativo');
-        INSERT INTO `igestao_dev`.`membro_status` (`tipo`) VALUES ('Inativo');
-        INSERT INTO `igestao_dev`.`membro_status` (`tipo`) VALUES ('Falecido');
+        INSERT INTO `igestao_dev`.`membro_status` (`nome`) VALUES ('Ativo');
+        INSERT INTO `igestao_dev`.`membro_status` (`nome`) VALUES ('Inativo');
+        INSERT INTO `igestao_dev`.`membro_status` (`nome`) VALUES ('Falecido');
          */
         Schema::create('membro_status', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('tipo', 20);
+            $table->string('nome', 20);
         });
     }
 

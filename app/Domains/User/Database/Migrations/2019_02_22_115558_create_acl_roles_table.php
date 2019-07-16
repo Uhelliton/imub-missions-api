@@ -14,7 +14,7 @@ class CreateAclRolesTable extends Migration
     public function up()
     {
         Schema::create('acl_funcao', function (Blueprint $table) {
-            $table->increments('id')->unsigned(false);
+            $table->increments('id');
             $table->string('slug', 60)->unique();
             $table->string('nome', 60);
             $table->text('permissoes')->nullable();

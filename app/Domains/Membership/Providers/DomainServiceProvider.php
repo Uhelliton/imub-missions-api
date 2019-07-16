@@ -12,11 +12,14 @@ class DomainServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->register(RouteServiceProvider::class);
+        $this->app->bind(
+            'IGestao\Domains\Membership\Repositories\Contracts\GenderInterface',
+            'IGestao\Domains\Membership\Repositories\GenderRepository'
+        );
 
-        /*$this->app->bind(
-            'Yago\Domains\Agenda\Contracts\EventInterface',
-            'Yago\Domains\Agenda\Repositories\EventRepository'
-        );*/
+        $this->app->bind(
+            'IGestao\Domains\Membership\Repositories\Contracts\CivilStatusInterface',
+            'IGestao\Domains\Membership\Repositories\CivilStatusRepository'
+        );
     }
 }

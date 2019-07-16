@@ -16,12 +16,12 @@ class CreateAclRoleUsers extends Migration
         Schema::create('acl_funcao_usuario', function (Blueprint $table) {
             //$table->increments('id');
 
-            $table->integer('usuario_id', false);
+            $table->integer('usuario_id', false)->unsigned();
             $table->foreign('usuario_id')
                   ->references('id')
                   ->on('acl_usuario');
 
-            $table->integer('funcao_id', false);
+            $table->integer('funcao_id', false)->unsigned();
             $table->foreign('funcao_id')
                   ->references('id')
                   ->on('acl_funcao');

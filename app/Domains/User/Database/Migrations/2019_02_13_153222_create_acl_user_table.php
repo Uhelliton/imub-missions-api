@@ -17,6 +17,7 @@ class CreateAclUserTable extends Migration
             $table->increments('id');
             $table->string('nome', 60);
             $table->string('email', 60);
+            $table->string('foto', 60);
             $table->string('password', 100);
             $table->string('remember_token', 100);
             $table->timestamps();

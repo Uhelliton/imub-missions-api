@@ -68,7 +68,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => IGestao\User::class,
+            'model' => IGestao\Domains\User\User::class,
         ],
 
         // 'users' => [

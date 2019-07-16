@@ -10,7 +10,7 @@ class Web extends RoutesFile
     public function routes()
     {
         $this->router->any('/', function () {
-            return 'bem vindo a api igestao';
+            return \File::get( public_path() . "/spa/index.html" );
         });
     }
 }

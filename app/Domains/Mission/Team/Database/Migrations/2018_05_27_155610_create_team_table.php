@@ -22,6 +22,11 @@ class CreateTeamTable extends Migration
             $table->foreign('lider_id')
                   ->references('id')
                   ->on('ms_membro');
+
+            $table->integer('projeto_id', false)->unsigned();
+            $table->foreign('projeto_id')
+                  ->references('id')
+                  ->on('ms_projeto');
         });
     }
 

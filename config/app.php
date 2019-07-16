@@ -168,10 +168,31 @@ return [
         OwenIt\Auditing\AuditingServiceProvider::class,
         Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
 
+
+        /*
+         * Domains Service Providers...
+         */
+        IGestao\Domains\User\Providers\DomainServiceProvider::class,
+        IGestao\Domains\Membership\Providers\DomainServiceProvider::class,
+        IGestao\Domains\Mission\Team\Providers\DomainServiceProvider::class,
+        IGestao\Domains\Mission\Evangelism\Providers\DomainServiceProvider::class,
+        IGestao\Domains\Mission\Locale\Providers\DomainServiceProvider::class,
+
+
         /*
          * Units Service Providers...
          */
-        IGestao\Units\Core\Providers\UnitServiceProvider::class
+        IGestao\Units\Core\Providers\UnitServiceProvider::class,
+        IGestao\Units\Auth\Providers\UnitServiceProvider::class,
+        IGestao\Units\Membership\Providers\UnitServiceProvider::class,
+        IGestao\Units\ProjectMissionary\Team\Providers\UnitServiceProvider::class,
+        IGestao\Units\ProjectMissionary\Evangelism\Providers\UnitServiceProvider::class,
+        IGestao\Units\ProjectMissionary\Locale\Providers\UnitServiceProvider::class,
+
+        /**
+         * Support Service Providers...
+         */
+        IGestao\Support\Providers\HelperServiceProvider::class,
 
     ],
 

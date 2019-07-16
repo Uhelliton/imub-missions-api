@@ -14,13 +14,13 @@ class CreateCivilStatusTable extends Migration
     public function up()
     {
         /**
-         INSERT INTO `igestao_dev`.`estado_civil` (`tipo`) VALUES ('Casado');
-         INSERT INTO `igestao_dev`.`estado_civil` (`tipo`) VALUES ('Solteiro');
-         INSERT INTO `igestao_dev`.`estado_civil` (`tipo`) VALUES ('Viúvo');
+         INSERT INTO `igestao_dev`.`estado_civil` (`nome`) VALUES ('Casado');
+         INSERT INTO `igestao_dev`.`estado_civil` (`nome`) VALUES ('Solteiro');
+         INSERT INTO `igestao_dev`.`estado_civil` (`nome`) VALUES ('Viúvo');
          */
         Schema::create('estado_civil', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('tipo', 60);
+            $table->string('nome', 60);
         });
     }
 

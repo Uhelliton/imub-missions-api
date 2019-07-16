@@ -15,7 +15,7 @@ class CreateCourseStatusTable extends Migration
     {
         Schema::create('curso_status', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('tipo', 15);
+            $table->string('nome', 15);
         });
     }
 

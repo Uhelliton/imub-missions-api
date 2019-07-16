@@ -15,7 +15,7 @@ class CreateFormSubscriptionAndressTable extends Migration
     {
         Schema::create('ms_ficha_inscricao_endereco', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('endereco')->nullable();
+            $table->string('rua')->nullable();
             $table->string('numero', 10)->nullable();
             $table->string('referencia')->nullable();
 
@@ -28,6 +28,11 @@ class CreateFormSubscriptionAndressTable extends Migration
             $table->foreign('cidade_id')
                   ->references('id')
                   ->on('ms_cidade');
+
+            $table->integer('ficha_inscricao_id', false)->unsigned();
+            $table->foreign('ficha_inscricao_id')
+                ->references('id')
+                ->on('ms_ficha_inscricao');
 
         });
     }

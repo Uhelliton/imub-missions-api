@@ -15,9 +15,10 @@ class CreateFormSubscriptionTable extends Migration
     {
         Schema::create('ms_ficha_inscricao', function (Blueprint $table) {
             $table->increments('id');
+            $table->mediumInteger('codigo', false)->unique();
             $table->string('nome', 100);
-            $table->tinyInteger('idade')->nullable();
-            $table->string('telefone', 11)->nullable();
+            $table->smallInteger('idade')->nullable();
+            $table->string('telefone', 15)->nullable();
 
             $table->integer('sexo_id', false)->unsigned();
             $table->foreign('sexo_id')
