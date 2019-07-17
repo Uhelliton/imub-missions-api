@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 use IGestao\Support\Http\Controllers\Controller;
 use IGestao\Domains\Mission\Evangelism\Repositories\Contracts\FactsheetInterface;
 use Illuminate\Database\DatabaseManager;
+use IGestao\Units\ProjectMissionary\Evangelism\Http\Requests\FactsheetRequest;
 
 class FactsheetController extends Controller
 {
@@ -56,10 +57,11 @@ class FactsheetController extends Controller
      * Responsalve para registrar uma nova ficha de inscrição
      *
      * @param Request $request
+     * @param FactsheetRequest $validate
      * @return Object
      * @throws \Exception
      */
-    public function store(Request $request) : Object
+    public function store(Request $request, FactsheetRequest $validate) : Object
     {
         $this->dbManager->beginTransaction();
         try {
@@ -86,6 +88,7 @@ class FactsheetController extends Controller
      *
      * @param  Request  $request
      * @param  int $id
+     * @param  FactsheetRequest $validate
      * @return \Illuminate\Http\JsonResponse
      */
     public function update(Request $request, int $id) : Object
