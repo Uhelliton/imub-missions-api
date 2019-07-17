@@ -42,6 +42,30 @@ class MemberRepository extends AbstractRepository implements MemberInterface
 
 
     /**
+     * @override all()
+     *
+     * @param array $collumns
+     * @param int|null $limit
+     * @return Illuminate\Http\Resources\Json\ResourceCollection
+     */
+    public function all($collumns = array('*'), int $limit = null)
+    {
+        $qSearchMember  = $_GET['sMember'] ?? null;
+        $qLimit          = $_GET['limit'] ?? $limit;
+
+        $collection =
+            $this->model
+                ->select($collumns)
+                ->where([
+                    ['nome', 'like', "%{$qSearchMember}%"],
+                ])
+                ->latest()
+                ->paginate($qLimit);
+
+        return  $this->collectionTransformer::make($collection);
+    }
+
+    /**
      * Resposável para retornar um lista simplificada
      *
      * @param array $orderBy

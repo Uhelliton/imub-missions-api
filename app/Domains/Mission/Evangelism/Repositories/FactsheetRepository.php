@@ -31,6 +31,33 @@ class FactsheetRepository extends AbstractRepository implements FactsheetInterfa
     protected $collectionTransformer = FactsheetCollectionTransformer::class;
 
 
+    /**
+     * @override all()
+     *
+     * @param array $collumns
+     * @param int|null $limit
+     * @return Illuminate\Http\Resources\Json\ResourceCollection
+     */
+    public function all($collumns = array('*'), int $limit = null)
+    {
+        $qSearchName          = $_GET['sName'] ?? null;
+        $qSearchFactsheetCod  = $_GET['sFactsheetCod'] ?? null;
+        $qLimit       = $_GET['limit'] ?? $limit;
+
+        $collection =
+            $this->model
+                ->select($collumns)
+                ->where([
+                    ['nome', 'like', "%{$qSearchName}%"],
+                    ['codigo', 'like', "%{$qSearchFactsheetCod}%"],
+                ])
+                ->latest()
+                ->paginate($qLimit);
+
+        return  $this->collectionTransformer::make($collection);
+    }
+
+
 
     /* * Método que faz a inserção de dados em uma tabela com relacionamento
      *

@@ -30,4 +30,29 @@ class TeamRepository extends AbstractRepository implements TeamInterface
     */
     protected $collectionTransformer = TeamCollectionTransformer::class;
 
+
+    /**
+     * @override all()
+     *
+     * @param array $collumns
+     * @param int|null $limit
+     * @return Illuminate\Http\Resources\Json\ResourceCollection
+     */
+    public function all($collumns = array('*'), int $limit = null)
+    {
+        $qSearchTeam  = $_GET['sTeam'] ?? null;
+        $qLimit          = $_GET['limit'] ?? $limit;
+
+        $collection =
+            $this->model
+                ->select($collumns)
+                ->where([
+                    ['nome', 'like', "%{$qSearchTeam}%"],
+                ])
+                ->orderBy('id', 'desc')
+                ->paginate($qLimit);
+
+        return  $this->collectionTransformer::make($collection);
+    }
+
 }
