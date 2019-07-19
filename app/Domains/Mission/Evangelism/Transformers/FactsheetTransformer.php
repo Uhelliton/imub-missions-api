@@ -26,6 +26,7 @@ class FactsheetTransformer extends JsonResource
             'hasCourse'          => (bool) $this->curso,
             'hasTakingDecision'  => (bool) $this->conversao,
             'hasCell'            => (bool) $this->celula,
+            'conversion'         => new ConversionTransformer($this->conversion),
             'team'               => new TeamOnlyTransformer($this->team),
             'project'            => new ProjectTransformer($this->project),
             'address'            => new FactsheetAddressTransformer($this->address),

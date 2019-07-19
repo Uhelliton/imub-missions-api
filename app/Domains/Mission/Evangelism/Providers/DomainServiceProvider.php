@@ -16,5 +16,10 @@ class DomainServiceProvider extends ServiceProvider
             'IGestao\Domains\Mission\Evangelism\Repositories\Contracts\FactsheetInterface',
             'IGestao\Domains\Mission\Evangelism\Repositories\FactsheetRepository'
         );
+
+        $this->app->bind(
+            'IGestao\Domains\Mission\Evangelism\Repositories\Contracts\ConversionInterface',
+            'IGestao\Domains\Mission\Evangelism\Repositories\ConversionRepository'
+        );
     }
 }

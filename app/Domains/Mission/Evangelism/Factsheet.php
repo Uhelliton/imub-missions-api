@@ -80,6 +80,7 @@ class Factsheet extends Model implements AuditableContract
         return $this->hasOne('IGestao\Domains\Mission\Team\Team', 'id', 'equipe_id');
     }
 
+
     /**
      * Relacionamento com a entidade {ms_ficha_inscricao_endereco}
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
@@ -87,5 +88,24 @@ class Factsheet extends Model implements AuditableContract
     public function address()
     {
         return $this->hasOne('IGestao\Domains\Mission\Evangelism\FactsheetAddress', 'ficha_inscricao_id', 'id');
+    }
+
+    /**
+     * Relacionamento com a entidade {ms_conversao}
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function conversion()
+    {
+        return $this->hasOne('IGestao\Domains\Mission\Evangelism\Conversion', 'ficha_inscricao_id', 'id');
+    }
+
+
+    /**
+     * Relacionamento com a entidade {ms_curso}
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function course()
+    {
+        return $this->hasOne('IGestao\Domains\Mission\Evangelism\Course', 'ficha_inscricao_id', 'id');
     }
 }

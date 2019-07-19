@@ -39,6 +39,7 @@ class FactsheetCollectionTransformer extends ResourceCollection
                     'hasCourse'          => (bool) $object->curso,
                     'hasTakingDecision'  => (bool) $object->conversao,
                     'hasCell'            => (bool) $object->celula,
+                    'conversion'        => new ConversionTransformer($object->conversion),
                     'team'               => new TeamOnlyTransformer($object->team),
                     'project'            => new ProjectTransformer($object->project),
                     'address'            => new FactsheetAddressTransformer($object->address),

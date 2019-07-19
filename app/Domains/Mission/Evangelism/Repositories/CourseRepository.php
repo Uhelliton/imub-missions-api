@@ -7,7 +7,7 @@ use IGestao\Domains\Mission\Evangelism\Transformers\FactsheetTransformer;
 use IGestao\Domains\Mission\Evangelism\Transformers\FactsheetCollectionTransformer;
 use IGestao\Support\Repository\AbstractRepository;
 
-class FactsheetRepository extends AbstractRepository implements FactsheetInterface
+class CourseRepository extends AbstractRepository implements FactsheetInterface
 {
 
     /*

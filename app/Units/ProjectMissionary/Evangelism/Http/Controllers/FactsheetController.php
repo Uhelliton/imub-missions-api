@@ -1,6 +1,7 @@
 <?php
 namespace IGestao\Units\ProjectMissionary\Evangelism\Http\Controllers;
 
+use IGestao\Domains\Mission\Evangelism\Jobs\CreateFactsheetConversion;
 use Illuminate\Http\Request;
 use IGestao\Support\Http\Controllers\Controller;
 use IGestao\Domains\Mission\Evangelism\Repositories\Contracts\FactsheetInterface;
@@ -69,6 +70,9 @@ class FactsheetController extends Controller
             $attributesFactsheetaddress = $this->setAttributesFactsheetAddress($request);
             $factsheet =  $this->factsheetRepository->createWithRalationship($attributesFactsheet, $attributesFactsheetaddress);
 
+            if (filter_var($request->get('hasTakingDecision'), FILTER_VALIDATE_BOOLEAN))
+                dispatch( new CreateFactsheetConversion($request->all(), $factsheet->id));
+
             $this->dbManager->commit();
             return $this->response201($factsheet);
         }
@@ -86,16 +90,19 @@ class FactsheetController extends Controller
     /**
      * Responsalve para atualizar uma ficha de inscrição
      *
-     * @param  Request  $request
-     * @param  int $id
-     * @param  FactsheetRequest $validate
-     * @return \Illuminate\Http\JsonResponse
+     * @param Request $request
+     * @param int $id
+     * @return Object
+     * @throws \Illuminate\Contracts\Container\BindingResolutionException
      */
     public function update(Request $request, int $id) : Object
     {
         $attributesFactsheet = $this->setAttributesFactsheet($request);
         $attributesFactsheetaddress = $this->setAttributesFactsheetAddress($request);
         $factsheet =  $this->factsheetRepository->updateWithRalationship($id, $attributesFactsheet, $attributesFactsheetaddress);
+
+        if (filter_var($request->get('hasTakingDecision'), FILTER_VALIDATE_BOOLEAN))
+            dispatch( new CreateFactsheetConversion($request->all(), $id));
 
         if ( !$factsheet )
             $this->response500();
@@ -133,9 +140,9 @@ class FactsheetController extends Controller
             'idade'           => ($request->get('age') != 0) ? $request->get('age') : null,
             'telefone'        => $request->get('telephone'),
             'sexo_id'         => $request->get('genderId'),
-            'curso'           => (bool) $request->get('hasCourse'),
-            'conversao'       => (bool) $request->get('hasTakingDecision'),
-            'celula'          => (bool) $request->get('hasCell'),
+            'curso'           =>  (int) filter_var($request->get('hasCourse'), FILTER_VALIDATE_BOOLEAN),
+            'conversao'       =>  (int) filter_var($request->get('hasTakingDecision'), FILTER_VALIDATE_BOOLEAN),
+            'celula'          =>  (int) filter_var($request->get('hasCell'), FILTER_VALIDATE_BOOLEAN),
             'projeto_id'           => $request->get('projectId'),
             'equipe_id'            => $request->get('teamId'),
             'membro_evangelismo'   => implode(', ', $request->get('evangelismMembers')),
