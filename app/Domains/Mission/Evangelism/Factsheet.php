@@ -26,7 +26,7 @@ class Factsheet extends Model implements AuditableContract
      */
     protected $fillable = [
         'codigo', 'nome', 'idade', 'telefone', 'sexo_id', 'curso', 'conversao', 'celula', 'projeto_id', 'equipe_id',
-        'membro_evangelismo', 'Acompanhantes', 'qtd_acompanhante', 'data_evangelismo'
+        'membro_evangelismo', 'Acompanhantes', 'qtd_acompanhante', 'observacao', 'data_evangelismo'
     ];
 
 
