@@ -27,7 +27,7 @@ class CreateMemberTable extends Migration
             $table->string('celular', 11)->nullable();
             $table->string('email', 60)->nullable();
 
-            $table->integer('membro_tipo_id', false)->unsigned();
+            $table->integer('membro_tipo_id', false)->unsigned(); // Gongregado || Membro
             $table->foreign('membro_tipo_id')
                   ->references('id')
                   ->on('membro_tipo');
